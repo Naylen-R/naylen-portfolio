@@ -106,10 +106,9 @@ export const trainerCard = {
   idNo: '0001',
   photoSrc: '/photo.jpg' as string | null,
   photoAlt: 'Portrait of Naylen Ramlakhan',
-  // TODO: replace with your own bio. Two or three sentences reads best here.
   bio: [
-    'I am a Computer Science and Business student who likes the part of the work where a rough idea turns into something people can actually use.',
-    'Right now I am Lead Engineer at TapOnThat, a Canadian NFC tap-card business. I care about clean interfaces, fast pages, and shipping.',
+    'I am a Computer Science and Business student who likes the part of the work where a rough idea turns into something people can actually use — a dashboard someone checks every morning, or a page that opens the instant a card gets tapped.',
+    'Right now that split shows up in two places: a Design & Construction Co-op at Elexicon Energy, tracking capital project progress and building Power BI dashboards, and Lead Engineer at TapOnThat, a Canadian NFC tap-card business now used by hundreds of vendors across the GTA.',
   ],
   infoRows: [
     { label: 'Name', value: 'Naylen Ramlakhan' },
@@ -247,6 +246,38 @@ export const skills = {
     },
     {
       no: 8,
+      name: 'JavaScript',
+      category: 'Language',
+      types: ['Dynamic', 'Web'],
+      entry: 'Where it all started before TypeScript took over — still what runs under the hood everywhere.',
+      level: 4,
+    },
+    {
+      no: 9,
+      name: 'HTML & CSS',
+      category: 'Frontend',
+      types: ['Markup', 'Styling'],
+      entry: 'The fundamentals under every interface I build, this site included — semantic markup and CSS that does not fight back.',
+      level: 4,
+    },
+    {
+      no: 10,
+      name: 'Python',
+      category: 'Language',
+      types: ['Scripting', 'Data'],
+      entry: 'Scripts, data wrangling and coursework. Fastest path from question to answer.',
+      level: 4,
+    },
+    {
+      no: 11,
+      name: 'SQL',
+      category: 'Data',
+      types: ['Query', 'Relational'],
+      entry: 'Schema design, joins, and pulling the right rows out of a database without scanning the whole table.',
+      level: 4,
+    },
+    {
+      no: 12,
       name: 'Git',
       category: 'Tooling',
       types: ['Workflow'],
@@ -254,7 +285,7 @@ export const skills = {
       level: 4,
     },
     {
-      no: 9,
+      no: 13,
       name: 'Vercel',
       category: 'Platform',
       types: ['Deploy', 'Cloud'],
@@ -317,7 +348,24 @@ export const expertise = {
       skills: ['Code review', 'Mentoring', 'Planning'],
       icon: 'lantern',
     },
-    // TODO: add a sixth badge, or delete this comment if five is right.
+    {
+      id: 'data',
+      name: 'Chart Badge',
+      area: 'Data & Reporting',
+      description:
+        'Turning raw numbers into something a room full of people can act on — built on Excel and Power BI at Elexicon Energy.',
+      skills: ['Excel', 'Power BI', 'MS Visio', 'KPI reporting'],
+      icon: 'chart',
+    },
+    {
+      id: 'nfc',
+      name: 'Tap Badge',
+      area: 'NFC & Embedded Systems',
+      description:
+        'Making a single physical tap reliably open the right page — the hardware side of how TapOnThat actually works.',
+      skills: ['NFC / NDEF', 'Embedded hardware', 'TypeScript'],
+      icon: 'signal',
+    },
   ] satisfies Badge[],
 };
 
@@ -421,12 +469,10 @@ export const ui = {
  * ======================================================================== */
 
 export const TODO_CHECKLIST = [
-  'trainerCard.bio — your own two or three sentences',
   'trainerCard.infoRows — your expected graduation year',
   'trainerCard.stats — honest numbers',
   'projects.items[0].stack — confirm the real stack',
-  'skills.entries — add any other real tools (coursework languages, etc.) and sanity-check the proficiency levels',
-  'expertise.badges — rename areas to your real ones',
+  'skills.entries — sanity-check the proficiency levels, add more if missing',
   'experience.mainQuests[0].period — Elexicon start date',
   'experience.sideQuests[1].period — Trent graduation year',
 ] as const;

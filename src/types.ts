@@ -19,7 +19,8 @@ export type IconKey =
   | 'sail'
   | 'chart'
   | 'lock'
-  | 'lantern';
+  | 'lantern'
+  | 'signal';
 
 export interface MenuEntry {
   id: Exclude<ScreenId, 'menu'>;

@@ -91,6 +91,14 @@ const paths: Record<IconKey, React.ReactNode> = {
       <path d="M9.6 20.6h4.8" />
     </>
   ),
+  signal: (
+    <>
+      <circle cx="12" cy="13.5" r="1.6" />
+      <path d="M8.8 10.3a4.6 4.6 0 0 1 6.4 0" />
+      <path d="M6.3 7.8a8.2 8.2 0 0 1 11.4 0" />
+      <path d="M3.8 5.3a11.8 11.8 0 0 1 16.4 0" />
+    </>
+  ),
 };
 
 interface IconProps {
