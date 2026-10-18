@@ -8,13 +8,13 @@
 
 import type {
   Badge,
+  BuildEntry,
   MenuEntry,
   Project,
   Quest,
   Skill,
   SocialLink,
   TrainerInfoRow,
-  TrainerStat,
 } from './types';
 
 /* --------------------------------------------------------------------------
@@ -115,13 +115,26 @@ export const trainerCard = {
     { label: 'Role', value: 'Design & Construction Co-op, Elexicon Energy' },
     { label: 'Status', value: 'Open to internships & collaborations' }, // TODO: keep or change
   ] satisfies TrainerInfoRow[],
-  // TODO: tune these to be honest about where you actually are.
-  stats: [
-    { label: 'Frontend', value: 88, note: 'React, TypeScript, CSS' },
-    { label: 'Backend', value: 74, note: 'APIs, data, auth' },
-    { label: 'Product Sense', value: 82, note: 'Scoping and shipping' },
-    { label: 'Business', value: 79, note: 'Strategy, ops, pricing' },
-  ] satisfies TrainerStat[],
+  // Only entries backed by something verifiable go here — repo history, a
+  // live link, or a fact Naylen confirmed directly. Marketing copy about a
+  // product (e.g. TapOnThat's own description) is not evidence of a specific
+  // personal technical contribution, so it does not get a card on its own.
+  // TODO: add a TapOnThat entry once you give me a specific technical problem
+  // you solved there (not just the role/stack) and a link.
+  // TODO: add an Elexicon entry once you give me a specific artifact (e.g. a
+  // named dashboard) and what problem it solved, beyond the general job duties.
+  builds: [
+    {
+      id: 'portfolio-site',
+      title: 'This portfolio site',
+      summary:
+        'Designed and built from scratch: a keyboard-navigable, game-menu-styled interface with light/dark theming and an ambient animated backdrop, shipped as a static site with no backend.',
+      tools: ['React', 'TypeScript', 'Vite', 'Vercel'],
+      problem:
+        'Replaced a third-party form API (Formspree) with a client-side mailto: flow, so the contact form works with zero backend dependency.',
+      link: { label: 'View source on GitHub', href: 'https://github.com/Naylen-R/naylen-portfolio' },
+    },
+  ] satisfies BuildEntry[],
 };
 
 /* --------------------------------------------------------------------------
@@ -403,7 +416,7 @@ export const ui = {
  * ======================================================================== */
 
 export const TODO_CHECKLIST = [
-  'trainerCard.stats — honest numbers',
+  'trainerCard.builds — add a TapOnThat entry (specific problem + link) and optionally an Elexicon one',
   'projects.items[0].stack — confirm the real stack',
   'skills.entries — sanity-check the proficiency levels (1-5)',
   'experience.mainQuests[0].period — Elexicon start date',

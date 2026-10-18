@@ -84,26 +84,42 @@ export function TrainerCardScreen({ onBack }: TrainerCardScreenProps) {
             ))}
           </div>
 
-          <div className="stats">
-            <h3 className="detail__section-title">Stats</h3>
-            {trainerCard.stats.map((stat) => (
-              <div className="stat" key={stat.label}>
-                <div className="stat__head">
-                  <span className="stat__label">{stat.label}</span>
-                  {stat.note ? <span className="stat__note">{stat.note}</span> : null}
-                </div>
-                <div
-                  className="stat__track"
-                  role="meter"
-                  aria-valuenow={stat.value}
-                  aria-valuemin={0}
-                  aria-valuemax={100}
-                  aria-label={`${stat.label}: ${stat.value} out of 100`}
-                >
-                  <div className="stat__fill" style={{ width: `${stat.value}%` }} />
-                </div>
-              </div>
-            ))}
+          <div className="builds">
+            <h3 className="detail__section-title">What I&rsquo;ve Built</h3>
+            <ul className="build-list">
+              {trainerCard.builds.map((build) => (
+                <li className="build-card" key={build.id}>
+                  <h4 className="build-card__title">{build.title}</h4>
+                  <p className="build-card__summary">{build.summary}</p>
+
+                  {build.problem ? (
+                    <p className="build-card__problem">
+                      <strong>Problem solved:</strong> {build.problem}
+                    </p>
+                  ) : null}
+
+                  <div className="tag-row">
+                    {build.tools.map((tool) => (
+                      <span className="tag tag--muted" key={tool}>
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+
+                  {build.link ? (
+                    <a
+                      className="build-card__link"
+                      href={build.link.href}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      {build.link.label}
+                      <ExternalIcon />
+                    </a>
+                  ) : null}
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="social-row">

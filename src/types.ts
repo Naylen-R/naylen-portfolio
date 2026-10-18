@@ -33,11 +33,16 @@ export interface MenuEntry {
   icon: IconKey;
 }
 
-export interface TrainerStat {
-  label: string;
-  /** 0-100, drives the stat bar width. */
-  value: number;
-  note?: string;
+export interface BuildEntry {
+  id: string;
+  /** What was built. */
+  title: string;
+  /** What it is / what you contributed — one or two sentences. */
+  summary: string;
+  tools: string[];
+  /** A specific technical problem solved. Omit rather than guess. */
+  problem?: string;
+  link?: { label: string; href: string };
 }
 
 export interface TrainerInfoRow {
