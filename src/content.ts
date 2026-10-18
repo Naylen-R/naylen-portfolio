@@ -202,14 +202,6 @@ export const skills = {
     },
     {
       no: 3,
-      name: 'MS Visio',
-      category: 'Data & Reporting',
-      types: ['Process mapping'],
-      entry: 'Process-improvement mapping for the Design and Construction group at Elexicon Energy.',
-      level: 3,
-    },
-    {
-      no: 4,
       name: 'TypeScript',
       category: 'Language',
       types: ['Typed', 'Web'],
@@ -218,7 +210,7 @@ export const skills = {
       level: 5,
     },
     {
-      no: 5,
+      no: 4,
       name: 'React',
       category: 'Framework',
       types: ['UI', 'Web'],
@@ -227,7 +219,7 @@ export const skills = {
       level: 5,
     },
     {
-      no: 6,
+      no: 5,
       name: 'Next.js',
       category: 'Framework',
       types: ['Fullstack', 'Web'],
@@ -236,60 +228,12 @@ export const skills = {
       level: 4,
     },
     {
-      no: 7,
+      no: 6,
       name: 'NFC / NDEF',
       category: 'Hardware',
       types: ['Embedded', 'Mobile'],
       entry:
         'Encoding and reading NFC tags so a single tap reliably opens the right page — the core of how TapOnThat works.',
-      level: 4,
-    },
-    {
-      no: 8,
-      name: 'JavaScript',
-      category: 'Language',
-      types: ['Dynamic', 'Web'],
-      entry: 'Where it all started before TypeScript took over — still what runs under the hood everywhere.',
-      level: 4,
-    },
-    {
-      no: 9,
-      name: 'HTML & CSS',
-      category: 'Frontend',
-      types: ['Markup', 'Styling'],
-      entry: 'The fundamentals under every interface I build, this site included — semantic markup and CSS that does not fight back.',
-      level: 4,
-    },
-    {
-      no: 10,
-      name: 'Python',
-      category: 'Language',
-      types: ['Scripting', 'Data'],
-      entry: 'Scripts, data wrangling and coursework. Fastest path from question to answer.',
-      level: 4,
-    },
-    {
-      no: 11,
-      name: 'SQL',
-      category: 'Data',
-      types: ['Query', 'Relational'],
-      entry: 'Schema design, joins, and pulling the right rows out of a database without scanning the whole table.',
-      level: 4,
-    },
-    {
-      no: 12,
-      name: 'Git',
-      category: 'Tooling',
-      types: ['Workflow'],
-      entry: 'Branches, clean history, and reviews that catch things before users do.',
-      level: 4,
-    },
-    {
-      no: 13,
-      name: 'Vercel',
-      category: 'Platform',
-      types: ['Deploy', 'Cloud'],
-      entry: 'Preview deploys on every push — what TapOnThat and this portfolio both ship on.',
       level: 4,
     },
   ] satisfies Skill[],
@@ -317,8 +261,8 @@ export const expertise = {
       name: 'Anchor Badge',
       area: 'Full-Stack Delivery',
       description:
-        'Taking a feature from schema to screen: API design, data modelling, auth, and the deploy at the end of it.',
-      skills: ['Node.js', 'REST APIs', 'SQL', 'Vercel'],
+        'Building and maintaining the web platform behind TapOnThat — from the page a tap opens to the deploy that ships it.',
+      skills: ['TypeScript', 'Next.js', 'API design', 'Deployment'],
       icon: 'anchor',
     },
     {
@@ -329,15 +273,6 @@ export const expertise = {
         'Deciding what is worth building. Scoping, prioritising, and connecting an engineering decision to a business one.',
       skills: ['Scoping', 'Prioritisation', 'Market research'],
       icon: 'compass',
-    },
-    {
-      id: 'business',
-      name: 'Ledger Badge',
-      area: 'Business & Operations',
-      description:
-        'The commercial half of my degree, applied: pricing, unit economics, and running a small operation that has to pay for itself.',
-      skills: ['Pricing', 'Operations', 'Analytics'],
-      icon: 'chart',
     },
     {
       id: 'leadership',
@@ -354,7 +289,7 @@ export const expertise = {
       area: 'Data & Reporting',
       description:
         'Turning raw numbers into something a room full of people can act on — built on Excel and Power BI at Elexicon Energy.',
-      skills: ['Excel', 'Power BI', 'MS Visio', 'KPI reporting'],
+      skills: ['Excel', 'Power BI', 'KPI reporting'],
       icon: 'chart',
     },
     {
@@ -472,7 +407,7 @@ export const TODO_CHECKLIST = [
   'trainerCard.infoRows — your expected graduation year',
   'trainerCard.stats — honest numbers',
   'projects.items[0].stack — confirm the real stack',
-  'skills.entries — sanity-check the proficiency levels, add more if missing',
+  'skills.entries — sanity-check the proficiency levels (1-5)',
   'experience.mainQuests[0].period — Elexicon start date',
   'experience.sideQuests[1].period — Trent graduation year',
 ] as const;
