@@ -28,11 +28,6 @@ export function Hud({ onHome }: HudProps) {
 
       <div className="hud__spacer" />
 
-      <p className="hud__hint">
-        <span className="hud__key">↑↓←→</span> move <span className="hud__key">Enter</span> open{' '}
-        <span className="hud__key">Esc</span> back
-      </p>
-
       <button type="button" className="theme-toggle" onClick={toggle} aria-label={nextLabel}>
         {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
         <span className="theme-toggle__label">{theme === 'dark' ? 'Day' : 'Night'}</span>

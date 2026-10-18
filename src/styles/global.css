@@ -205,30 +205,6 @@ ol {
   flex: 1;
 }
 
-.hud__hint {
-  display: none;
-  font-size: var(--step--2);
-  color: var(--muted);
-  letter-spacing: 0.02em;
-}
-
-@media (min-width: 900px) {
-  .hud__hint {
-    display: inline;
-  }
-}
-
-.hud__key {
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  padding: 1px 5px;
-  border: 1px solid var(--line-strong);
-  border-bottom-width: 2px;
-  border-radius: 4px;
-  background: var(--surface);
-  color: var(--ink-soft);
-}
-
 /* --- Theme toggle ------------------------------------------------------- */
 
 .theme-toggle {
