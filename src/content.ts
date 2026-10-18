@@ -335,6 +335,25 @@ export const experience = {
   dialogue: 'Quest log open. Main quest first.',
   mainQuests: [
     {
+      id: 'elexicon-coop',
+      title: 'Design & Construction Co-op',
+      org: 'Elexicon Energy',
+      period: 'Present', // TODO: add a start date, e.g. "2025 — Present"
+      status: 'active',
+      summary:
+        'Co-op placement in the Design and Construction group at Elexicon Energy.', // TODO: expand — what the team does, what you own day to day.
+      objectives: [
+        // TODO: replace with your real responsibilities, e.g. design drawings, project
+        // coordination, site/field work, permitting, stakeholder communication.
+        'Add a core responsibility.',
+        'Add a core responsibility.',
+        'Add a measurable outcome — a project delivered, a process improved, a number.',
+      ],
+      rewards: ['Project coordination', 'Technical design'], // TODO: real skills from the role
+    },
+  ] satisfies Quest[],
+  sideQuests: [
+    {
       id: 'taponthat-role',
       title: 'Lead Engineer',
       org: 'TapOnThat',
@@ -350,8 +369,6 @@ export const experience = {
       ],
       rewards: ['TypeScript', 'Next.js', 'NFC', 'Team leadership'],
     },
-  ] satisfies Quest[],
-  sideQuests: [
     {
       id: 'degree',
       title: 'Computer Science & Business', // TODO: exact program name
@@ -365,19 +382,6 @@ export const experience = {
         'Add a standout course, project or award here.', // TODO
       ],
       rewards: ['Algorithms', 'Databases', 'Strategy'], // TODO
-    },
-    {
-      id: 'side-quest-2',
-      title: 'Add a role, club, or internship', // TODO
-      org: 'Organisation', // TODO
-      period: '20XX', // TODO
-      status: 'complete',
-      summary: 'One or two sentences on what you did and what changed because of it.', // TODO
-      objectives: [
-        'A concrete thing you shipped or ran.', // TODO
-        'A result, ideally with a number attached.', // TODO
-      ],
-      rewards: ['Skill A', 'Skill B'], // TODO
     },
   ] satisfies Quest[],
 };
