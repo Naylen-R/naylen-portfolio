@@ -51,11 +51,6 @@ export default function App() {
         <main className="page" id="main" tabIndex={-1}>
           {renderScreen(path, navigate, goHome)}
         </main>
-        <footer className="footer">
-          <p>
-            © {new Date().getFullYear()} {site.name} · {site.footerNote}
-          </p>
-        </footer>
       </div>
     </>
   );

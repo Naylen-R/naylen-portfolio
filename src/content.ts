@@ -28,7 +28,6 @@ export const site = {
   location: 'Toronto, Canada',
   tagline: 'Building things on the web, one voyage at a time.',
   menuGreeting: 'Choose a destination.',
-  footerNote: 'Original artwork. Inspired by games, affiliated with none.',
 } as const;
 
 /* --------------------------------------------------------------------------

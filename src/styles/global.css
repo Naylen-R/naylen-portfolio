@@ -244,19 +244,6 @@ ol {
   }
 }
 
-/* --- Footer ------------------------------------------------------------- */
-
-.footer {
-  position: relative;
-  z-index: 1;
-  padding: var(--sp-5);
-  border-top: 1px solid var(--line);
-  background: color-mix(in srgb, var(--bg) 86%, transparent);
-  color: var(--muted);
-  font-size: var(--step--1);
-  text-align: center;
-}
-
 /* --- Ambient scene ------------------------------------------------------ */
 
 .scene {
