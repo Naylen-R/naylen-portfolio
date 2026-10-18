@@ -113,8 +113,8 @@ export const trainerCard = {
   ],
   infoRows: [
     { label: 'Name', value: 'Naylen Ramlakhan' },
-    { label: 'Program', value: 'Computer Science & Business' }, // TODO: add your school and year
-    { label: 'Role', value: 'Lead Engineer, TapOnThat' },
+    { label: 'Program', value: 'Computer Science & Business, Trent University' }, // TODO: add your expected grad year
+    { label: 'Role', value: 'Design & Construction Co-op, Elexicon Energy' },
     { label: 'Status', value: 'Open to internships & collaborations' }, // TODO: keep or change
   ] satisfies TrainerInfoRow[],
   // TODO: tune these to be honest about where you actually are.
@@ -148,7 +148,7 @@ export const projects = {
         'Tap-to-open experience built around a single NFC tap: no app, no install, no friction.',
         'One card can point at whatever the business needs most — bookings, a menu, a website, or direct contact.',
         'Designed for small Canadian businesses that want a physical object doing digital work.',
-        // TODO: add one or two concrete wins — cards shipped, clients onboarded, load time, conversion.
+        'In use by hundreds of vendors across the Greater Toronto Area.',
       ],
       // TODO: confirm this stack matches what TapOnThat actually runs on.
       stack: ['TypeScript', 'React', 'Next.js', 'NFC / NDEF', 'Vercel'],
@@ -341,15 +341,13 @@ export const experience = {
       period: 'Present', // TODO: add a start date, e.g. "2025 — Present"
       status: 'active',
       summary:
-        'Co-op placement in the Design and Construction group at Elexicon Energy.', // TODO: expand — what the team does, what you own day to day.
+        'Co-op placement in the Design and Construction group at Elexicon Energy, supporting capital construction project tracking, KPI reporting, and future planning.',
       objectives: [
-        // TODO: replace with your real responsibilities, e.g. design drawings, project
-        // coordination, site/field work, permitting, stakeholder communication.
-        'Add a core responsibility.',
-        'Add a core responsibility.',
-        'Add a measurable outcome — a project delivered, a process improved, a number.',
+        'Track progress and spending on capital construction projects in Excel, reporting status at progress meetings.',
+        'Build and maintain Power BI dashboards to track and report departmental KPIs.',
+        'Assist in developing the Execution Work Program, the annual capital project plan.',
       ],
-      rewards: ['Project coordination', 'Technical design'], // TODO: real skills from the role
+      rewards: ['Excel', 'Power BI', 'Project tracking', 'KPI reporting'],
     },
   ] satisfies Quest[],
   sideQuests: [
@@ -364,16 +362,15 @@ export const experience = {
       objectives: [
         'Own the tap-to-page experience end to end, from NFC encoding to the page that loads.',
         'Build and maintain the web platform behind the cards.',
-        'Keep load times low enough that a tap feels instant.',
-        // TODO: add measurable outcomes — clients served, cards shipped, performance numbers.
+        'In use by hundreds of vendors across the Greater Toronto Area.',
       ],
       rewards: ['TypeScript', 'Next.js', 'NFC', 'Team leadership'],
     },
     {
       id: 'degree',
-      title: 'Computer Science & Business', // TODO: exact program name
-      org: 'Your University', // TODO
-      period: 'Expected 20XX', // TODO
+      title: 'Computer Science & Business',
+      org: 'Trent University',
+      period: 'Expected 20XX', // TODO: your expected graduation year
       status: 'active',
       summary:
         'A joint degree in software and commerce — algorithms and data structures on one side, strategy and operations on the other.', // TODO
@@ -430,12 +427,11 @@ export const ui = {
 
 export const TODO_CHECKLIST = [
   'trainerCard.bio — your own two or three sentences',
-  'trainerCard.infoRows — school, program and year',
+  'trainerCard.infoRows — your expected graduation year',
   'trainerCard.stats — honest numbers',
-  'projects.items[0].details — concrete TapOnThat wins',
   'projects.items[0].stack — confirm the real stack',
   'skills.entries — prune and re-rank to what you actually use',
   'expertise.badges — rename areas to your real ones',
-  'experience.mainQuests[0].period — start date',
-  'experience.sideQuests — real roles, school, dates',
+  'experience.mainQuests[0].period — Elexicon start date',
+  'experience.sideQuests[1].period — Trent graduation year',
 ] as const;
