@@ -107,12 +107,12 @@ export const trainerCard = {
   photoSrc: '/photo.jpg' as string | null,
   photoAlt: 'Portrait of Naylen Ramlakhan',
   bio: [
-    'I am a Computer Science and Business student who likes the part of the work where a rough idea turns into something people can actually use — a dashboard someone checks every morning, or a page that opens the instant a card gets tapped.',
-    'Right now that split shows up in two places: a Design & Construction Co-op at Elexicon Energy, tracking capital project progress and building Power BI dashboards, and Lead Engineer at TapOnThat, a Canadian NFC tap-card business now used by hundreds of vendors across the GTA.',
+    "I'm a Computer Science and Business student at Trent University. I like building things people actually end up using, not just code that runs on my machine.",
+    "Right now I'm doing a Design & Construction co-op at Elexicon Energy, where I track capital project progress and build Power BI dashboards. I'm also the Lead Engineer at TapOnThat, a Canadian NFC tap-card company now used by hundreds of vendors across the GTA.",
   ],
   infoRows: [
     { label: 'Name', value: 'Naylen Ramlakhan' },
-    { label: 'Program', value: 'Computer Science & Business, Trent University' }, // TODO: add your expected grad year
+    { label: 'Program', value: 'Computer Science & Business, Trent University \'27' },
     { label: 'Role', value: 'Design & Construction Co-op, Elexicon Energy' },
     { label: 'Status', value: 'Open to internships & collaborations' }, // TODO: keep or change
   ] satisfies TrainerInfoRow[],
@@ -348,7 +348,7 @@ export const experience = {
       id: 'degree',
       title: 'Computer Science & Business',
       org: 'Trent University',
-      period: 'Expected 20XX', // TODO: your expected graduation year
+      period: 'Expected 2027',
       status: 'active',
       summary:
         'A joint degree in software and commerce — algorithms and data structures on one side, strategy and operations on the other.', // TODO
@@ -404,10 +404,8 @@ export const ui = {
  * ======================================================================== */
 
 export const TODO_CHECKLIST = [
-  'trainerCard.infoRows — your expected graduation year',
   'trainerCard.stats — honest numbers',
   'projects.items[0].stack — confirm the real stack',
   'skills.entries — sanity-check the proficiency levels (1-5)',
   'experience.mainQuests[0].period — Elexicon start date',
-  'experience.sideQuests[1].period — Trent graduation year',
 ] as const;
